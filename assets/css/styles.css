@@ -5239,8 +5239,8 @@ button.is-checked {
 }
 .whatsapp-button {
   position: fixed;
-  bottom: 55px;
-  left: 20px;
+  bottom: 50px;
+  right: 20px;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -5253,8 +5253,8 @@ button.is-checked {
   justify-content: center;
   background-color: #25D366;
   color: #fff;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   text-decoration: none;
 }
@@ -5265,26 +5265,4 @@ button.is-checked {
 }
 
 
-.help-text {
-  visibility: hidden;
-  position: absolute;
-  opacity: 0;
-  top: -128px;
-  /* Adjust the distance from the top as needed */
-  left: 7px;
-  /* Adjust the distance from the left as needed */
-  width: 240px;
-  /* Adjust the width as needed */
-  background-color: #fff;
-  color: #000;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 14px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.3s ease-in-out;
-}
-.help-text.show {
-visibility: visible;
-opacity: 1;
-}
+

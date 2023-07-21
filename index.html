@@ -2538,7 +2538,7 @@
     <a href="https://wa.me/923046810547?text=Hi%20Bazil!" target="_blank" class="whatsapp-button">
       <img src="assets/images/whatsapp.png" alt="WhatsApp">
     </a>
-    <div id="helpText" class="help-text">Thank You for visiting my profile, how can I assist you?</div>
+   
   </div>
 
 
@@ -2559,9 +2559,28 @@
   <script src="assets/js/script.js" defer></script>
 
   <script>
-        setTimeout(function() {
-        document.getElementById("helpText").classList.add("show");
-      }, 2000);
+      $(document).ready(function() {
+    // Store the initial CSS properties
+    var initialStyles = {
+      bottom: $('.whatsapp-button').css('bottom'),
+    };
+
+    $(window).scroll(function() {
+      // Calculate how far the user has scrolled from the top
+      var scrollTop = $(this).scrollTop();
+
+      // Set the new CSS styles based on the scroll position
+      if (scrollTop > 100) { // Adjust this value to set when the change should occur
+        alert("asdas");
+        $('.whatsapp-button').css({
+          bottom: '103px',
+        });
+      } else {
+        // Reset to the initial CSS styles
+        $('#scrollElement').css(initialStyles);
+      }
+    });
+  });
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
       document.getElementById("light__to--dark")?.classList.add("dark--version");
@@ -2571,6 +2590,9 @@
     } 
 
   </script>
+<script>
+
+</script>
 
 </body>
 
