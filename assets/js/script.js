@@ -133,6 +133,10 @@ if (headerStickyTarget) {
 
 // Back to top
 const scrollTop = document.getElementById("scroll__top");
+const whatsapp_button = document.getElementById("whatsapp-button");
+const whatsapp_image = document.getElementById("whatsapp_image");
+
+
 if (scrollTop) {
   scrollTop.addEventListener("click", function () {
     window.scroll({ top: 0, left: 0, behavior: "smooth" });
@@ -140,8 +144,13 @@ if (scrollTop) {
   window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
       scrollTop.classList.add("active");
+      whatsapp_image.style.position ="fixed";
+      whatsapp_image.style.bottom = "103px";
     } else {
       scrollTop.classList.remove("active");
+      whatsapp_image.style.position ="fixed";
+      whatsapp_image.style.bottom = "50px";
+
     }
   });
 }

@@ -5246,7 +5246,10 @@ button.is-checked {
   align-items: center;
   justify-content: center;
 }
-
+.whatsapp_button_active {
+  position: fixed;
+  bottom: 103px !important;
+}
 .whatsapp-button a {
   display: flex;
   align-items: center;
